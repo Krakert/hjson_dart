@@ -1,0 +1,15 @@
+name: hjson_dart
+description: "A Dart implementation of the HJSON format - a user interface for JSON."
+version: 0.1.0
+maintainer: Stefan de Kraker (stefandekraker1999@gmail.com)
+homepage: https://github.com/Krakert/hjson_dart
+issue_tracker: https://github.com/Krakert/hjson_dart/issues
+
+
+environment:
+  sdk: ^3.0.0
+
+dev_dependencies:
+  test: ^1.26.3
+  lints: ^3.0.0
+
