@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 /// Escape table for characters that must be escaped in quoted strings.
 final Map<String, String> _escapeDct = () {
   final dct = <String, String>{
