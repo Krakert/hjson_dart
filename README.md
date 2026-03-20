@@ -83,6 +83,7 @@ try {
 ## Testing
 
 Tests are ported from the [hjson-py](https://github.com/hjson/hjson-py/tree/master/hjson/tests) test suite.
+The fixture files in `test/assets/` are already included in this package, so no separate download step is required.
 
 ### Run all tests
 
