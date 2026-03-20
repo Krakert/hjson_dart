@@ -3,13 +3,33 @@ import 'hjson_error.dart';
 final _numberRe =
     RegExp(r'^[\t ]*(-?(?:0|[1-9]\d*))(\.\d+)?([eE][-+]?\d+)?[\t ]*$');
 
+/// Decodes Hjson text into standard Dart values.
+///
+/// Example:
+/// ```dart
+/// final decoder = HjsonDecoder('answer: 42');
+/// final value = decoder.decode();
+/// print(value['answer']);
+/// ```
 class HjsonDecoder {
+  /// Input Hjson or JSON source text.
   final String source;
+
+  /// Whether to use strict JSON-compatible parsing rules where applicable.
   final bool strict;
   int _index = 0;
 
+  /// Creates a decoder for the provided [source].
   HjsonDecoder(this.source, {this.strict = true});
 
+  /// Parses the configured source and returns the decoded Dart value.
+  ///
+  /// Example:
+  /// ```dart
+  /// final decoder = HjsonDecoder('[1, 2, 3]');
+  /// final values = decoder.decode() as List<dynamic>;
+  /// print(values.length);
+  /// ```
   dynamic decode() {
     _index = 0;
 

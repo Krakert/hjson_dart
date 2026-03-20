@@ -20,13 +20,30 @@ final Map<String, String> _escapeDct = () {
   return dct;
 }();
 
+/// Encodes standard Dart values as Hjson text.
+///
+/// Example:
+/// ```dart
+/// final encoder = HjsonEncoder(separator: true);
+/// print(encoder.convert({'name': 'hjson'}));
+/// ```
 class HjsonEncoder {
+  /// Indentation string used for nested collections.
   final String indent;
+
+  /// Whether braces should be emitted for a root object.
   final bool emitRootBraces;
+
+  /// Quoting strategy for keys and string values.
   final String quotes;
+
+  /// Whether separators should be emitted after values.
   final bool separator;
+
+  /// Multiline string handling mode.
   final String multiline;
 
+  /// Creates an encoder with the provided formatting options.
   HjsonEncoder({
     this.indent = '  ',
     this.emitRootBraces = true,
@@ -84,6 +101,14 @@ class HjsonEncoder {
     return buf.toString();
   }
 
+  /// Converts a supported Dart value into Hjson output.
+  ///
+  /// Example:
+  /// ```dart
+  /// final encoder = HjsonEncoder(indent: '    ');
+  /// final text = encoder.convert({'name': 'hjson'});
+  /// print(text);
+  /// ```
   String convert(dynamic object) {
     final chunks = <String>[];
     _iterencode(object, 0, true, chunks);
