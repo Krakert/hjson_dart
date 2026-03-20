@@ -23,8 +23,7 @@ Add `hjson_dart` as a dependency:
 
 ```yaml
 dependencies:
-  hjson_dart:
-    path: ../hjson_dart  # or publish to pub.dev
+  hjson_dart: ^0.1.1
 ```
 
 ## Usage
@@ -84,16 +83,6 @@ try {
 ## Testing
 
 Tests are ported from the [hjson-py](https://github.com/hjson/hjson-py/tree/master/hjson/tests) test suite.
-
-### Download test assets
-
-Test assets (HJSON/JSON fixture files) must be downloaded first:
-
-```sh
-dart run test/download_tests.dart
-```
-
-This fetches the shared HJSON test assets into `test/assets/`.
 
 ### Run all tests
 
