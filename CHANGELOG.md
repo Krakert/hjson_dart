@@ -1,3 +1,9 @@
+## 0.1.1
+
+* Updated the README to use the published `hjson_dart` package dependency.
+* Clarified that test assets are bundled in `test/assets/` and do not need to be downloaded.
+* Expanded public API documentation with additional dartdoc coverage and examples.
+
 ## 0.1.0
 
 * Initial release with HJSON decoder and encoder.
